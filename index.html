@@ -16,8 +16,8 @@
   <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
 <style>
-/* Layout follows the authors' previous page (after pixeldit.github.io); palette uses UNC Charlotte green & gold. */
-:root{--accent:#00703c;--accent-dark:#005035;--accent-soft:#eaf5ee;--gold:#b9a66b;--primary-gradient:linear-gradient(135deg,#00873f 0%,#005035 100%);--page-bg:#fcfcfc;--ink:#1a1a1a}
+/* Layout follows the authors' previous page (after pixeldit.github.io); palette: blue (user's choice) with UNC Charlotte gold. */
+:root{--accent:#1d5fbf;--accent-dark:#164a94;--accent-soft:#eaf1fb;--gold:#b9a66b;--primary-gradient:linear-gradient(135deg,#2a7de1 0%,#164a94 100%);--page-bg:#fcfcfc;--ink:#1a1a1a}
 body{font-family:'Noto Sans',sans-serif;background-color:var(--page-bg);color:#333}
 .title,.subtitle{font-family:'Google Sans','Noto Sans',sans-serif}
 .accent{color:var(--accent)!important}
@@ -26,18 +26,18 @@ img{display:block}
 .hero-fancy .hero-body{padding-left:0;padding-right:0}
 .publication-title-fancy{font-weight:500;font-size:2.5rem;line-height:1.15;color:var(--ink);margin-bottom:1.5rem!important;letter-spacing:-.03em}
 .publication-title-fancy .highlight-green{background:var(--primary-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;display:inline-block;font-size:3.5rem;font-weight:700}
-.abbr-highlight{color:var(--accent);border-bottom:2px solid rgba(0,112,60,.5)}
+.abbr-highlight{color:var(--accent);border-bottom:2px solid rgba(29,95,191,.5)}
 .authors-fancy{font-family:'Google Sans',sans-serif;font-size:1.25rem;margin-bottom:.8rem}
 .author-block{margin:0 4px;white-space:nowrap}
 .author-block sup{color:#777;font-size:.7em;margin-left:1px}
-.author-link{color:#2a2a2a;border-bottom:1px solid rgba(0,112,60,.3);padding-bottom:2px;transition:color .2s,border-color .2s}
+.author-link{color:#2a2a2a;border-bottom:1px solid rgba(29,95,191,.3);padding-bottom:2px;transition:color .2s,border-color .2s}
 a.author-link:hover{color:var(--accent);border-color:var(--accent)}
 .affiliations-fancy{color:#666;font-size:1.05rem;margin-bottom:1.6rem;font-weight:300;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 22px}
 .aff-item sup{margin-right:2px}
-.aff-link{color:var(--accent);font-weight:500;border-bottom:1px solid rgba(0,112,60,.3)}
+.aff-link{color:var(--accent);font-weight:500;border-bottom:1px solid rgba(29,95,191,.3)}
 .btn-fancy-container{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-top:20px}
 .btn-fancy{background:var(--ink);border:1px solid var(--ink);color:#fff!important;padding:12px 28px;border-radius:30px;font-weight:600;display:inline-flex;align-items:center;box-shadow:0 4px 6px rgba(0,0,0,.1);transition:all .3s cubic-bezier(.4,0,.2,1)}
-a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,112,60,.3)}
+a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 12px rgba(29,95,191,.3)}
 .btn-fancy .icon{margin-right:10px}
 .btn-fancy.is-soon{background:#f1f1f1;border-color:#e2e2e2;color:#888!important;box-shadow:none;cursor:default}
 .btn-fancy.is-soon small{margin-left:8px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:#fff;border-radius:999px;padding:1px 7px;color:#999}
@@ -55,19 +55,19 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 @media (prefers-reduced-motion:reduce){.hero-teaser-marquee{overflow-x:auto}}
 .band{padding:4rem 1.5rem}
 .band-white{background:#fff}
-.band-tint{background:radial-gradient(circle at 20% 20%,#f0faf3 0%,#f8fcf9 45%,#e6f3ea 100%);border-top:1px solid #dcebe1;border-bottom:1px solid #d3e6da}
-.band-fade{background:linear-gradient(180deg,#e9f4ed 0%,#f4faf6 45%,#fff 100%);border-top:1px solid #dcebe1}
+.band-tint{background:radial-gradient(circle at 20% 20%,#f0f5fd 0%,#f8fbff 45%,#e6eef9 100%);border-top:1px solid #dce6f3;border-bottom:1px solid #d3dff0}
+.band-fade{background:linear-gradient(180deg,#e9f0fa 0%,#f4f8fd 45%,#fff 100%);border-top:1px solid #dce6f3}
 .band-gray{background:#f7f8f7;border-top:1px solid #eceeed;border-bottom:1px solid #eceeed}
 .band .content,.band .method-intro{max-width:860px;margin-left:auto;margin-right:auto}
 .method-title{margin-top:3.5rem}
 #perf .tabs,#perf .tab-content,#perf .container>p{max-width:1000px;margin-left:auto;margin-right:auto}
 #perf .tabs{margin-bottom:1.5rem}
-.section-card{background:#fff;border-radius:20px;border:1px solid #e6ece8;box-shadow:0 24px 60px rgba(25,35,60,.08);padding:2.8rem 3rem}
+.section-card{background:#fff;border-radius:20px;border:1px solid #e6eaf0;box-shadow:0 24px 60px rgba(25,35,60,.08);padding:2.8rem 3rem}
 .idea-lead{max-width:780px;margin:0 auto 2.2rem;text-align:center;color:#555;font-size:1.05rem}
 .versus{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
 .vs-side{border-radius:16px;padding:1.1rem;display:flex;flex-direction:column;gap:.6rem}
 .vs-base{background:#f4f4f5;border:2px dashed #c9c9cf}
-.vs-ours{background:#fff;border:2px solid var(--accent);box-shadow:0 14px 30px rgba(0,80,53,.12)}
+.vs-ours{background:#fff;border:2px solid var(--accent);box-shadow:0 14px 30px rgba(22,74,148,.12)}
 .vs-tag{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#666}
 .vs-ours .vs-tag{color:var(--accent)}
 .vs-eq{font-size:.95rem;color:#333;overflow-x:auto}
@@ -95,7 +95,7 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 .fig-card figcaption{font-size:.85rem;color:#777;margin-top:.6rem}
 .zoom img{background:#fff}
 .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1000px;margin:0 auto 2rem}
-.stat-box{background:#fff;border-radius:14px;border:1px solid #dcebe1;padding:1rem;text-align:center;box-shadow:0 8px 20px rgba(0,80,53,.06)}
+.stat-box{background:#fff;border-radius:14px;border:1px solid #dce6f3;padding:1rem;text-align:center;box-shadow:0 8px 20px rgba(22,74,148,.06)}
 .stat-box b{display:block;font-family:'Google Sans',sans-serif;font-size:1.7rem;color:var(--accent-dark);line-height:1.15}
 .stat-box span{font-size:.82rem;color:#666}
 .perf-tabs.tabs.is-toggle a{color:var(--accent);border-color:var(--accent)}
@@ -108,10 +108,10 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 .fancy-table td{padding:9px 14px;border-bottom:1px solid #f0f0f0;color:#666;vertical-align:middle;white-space:nowrap}
 .fancy-table td[rowspan]{font-weight:700;color:#333;border-right:1px solid #f0f0f0}
 .fancy-table .dense-row td:not([rowspan]){color:#999;font-style:italic}
-.fancy-table .highlight-row{background:#f5fbf7}
+.fancy-table .highlight-row{background:#f5f9fe}
 .fancy-table .highlight-row td{color:#222;font-weight:600}
-.fancy-table .group-row td{background:#f3f6f4;color:var(--accent-dark);font-weight:700;text-align:left;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
-.fancy-table .ours-col{background:#f5fbf7;color:#222}
+.fancy-table .group-row td{background:#f3f5f9;color:var(--accent-dark);font-weight:700;text-align:left;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.fancy-table .ours-col{background:#f5f9fe;color:#222}
 .fancy-table th.th-ours{color:var(--accent)}
 .best-val{color:var(--accent)!important;font-weight:700!important}
 .metric-label{font-size:.75em;color:#888}
@@ -313,17 +313,17 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
     <div id="mjhq-content" class="tab-content">
       <h4 class="title is-5 has-text-centered">Text-to-image on MJHQ</h4>
       <p class="scroll-hint">Scroll sideways for all columns &rarr;</p><div class="table-container"><table class="fancy-table"><thead><tr><th>Model</th><th style="text-align:left;">Method</th><th>CLIP-IQA <span class="metric-label">(↑)</span></th><th>CLIP <span class="metric-label">(↑)</span></th><th>FID-GT <span class="metric-label">(↓)</span></th><th>IR <span class="metric-label">(↑)</span></th><th>FID-O <span class="metric-label">(↓)</span></th><th>LPIPS <span class="metric-label">(↓)</span></th><th>PSNR <span class="metric-label">(↑)</span></th><th>SSIM <span class="metric-label">(↑)</span></th></tr></thead><tbody><tr class="dense-row"><td rowspan="3">PixArt-Σ</td><td style="text-align:left;">FP16</td><td>.943</td><td>26.80</td><td>16.58</td><td>.952</td><td>–</td><td>–</td><td>–</td><td>–</td></tr><tr><td style="text-align:left;">SVDQuant</td><td>.926</td><td>26.57</td><td>18.84</td><td>.879</td><td>15.78</td><td>.322</td><td>17.56</td><td>.653</td></tr><tr class="highlight-row"><td style="text-align:left;">Ours</td><td class="best-val">.931</td><td class="best-val">26.60</td><td class="best-val">18.02</td><td class="best-val">.892</td><td class="best-val">14.10</td><td class="best-val">.306</td><td class="best-val">17.84</td><td class="best-val">.663</td></tr><tr class="dense-row"><td rowspan="3">FLUX.1-schnell</td><td style="text-align:left;">BF16</td><td>.937</td><td>26.65</td><td>19.28</td><td>.963</td><td>–</td><td>–</td><td>–</td><td>–</td></tr><tr><td style="text-align:left;">SVDQuant</td><td>.936</td><td>26.44</td><td>18.42</td><td>.946</td><td>7.04</td><td>.252</td><td>18.42</td><td>.729</td></tr><tr class="highlight-row"><td style="text-align:left;">Ours</td><td class="best-val">.937</td><td class="best-val">26.46</td><td class="best-val">18.30</td><td class="best-val">.953</td><td class="best-val">6.86</td><td class="best-val">.245</td><td class="best-val">18.58</td><td class="best-val">.734</td></tr><tr class="dense-row"><td rowspan="3">SANA-1.6B</td><td style="text-align:left;">BF16</td><td>.940</td><td>27.28</td><td>15.95</td><td>1.098</td><td>–</td><td>–</td><td>–</td><td>–</td></tr><tr><td style="text-align:left;">SVDQuant</td><td class="best-val">.934</td><td class="best-val">27.26</td><td class="best-val">16.03</td><td class="best-val">1.078</td><td>6.79</td><td>.201</td><td>18.68</td><td>.696</td></tr><tr class="highlight-row"><td style="text-align:left;">Ours</td><td class="best-val">.934</td><td class="best-val">27.26</td><td class="best-val">16.03</td><td>1.077</td><td class="best-val">6.63</td><td class="best-val">.198</td><td class="best-val">18.70</td><td class="best-val">.699</td></tr></tbody></table></div>
-      <p class="table-note">FID-O: FID against the full-precision outputs. <span class="accent">Green</span>: best quantized result.</p>
+      <p class="table-note">FID-O: FID against the full-precision outputs. <span class="accent">Blue</span>: best quantized result.</p>
     </div>
     <div id="sdci-content" class="tab-content" style="display:none;">
       <h4 class="title is-5 has-text-centered">Text-to-image on sDCI</h4>
       <p class="scroll-hint">Scroll sideways for all columns &rarr;</p><div class="table-container"><table class="fancy-table"><thead><tr><th>Model</th><th style="text-align:left;">Method</th><th>CLIP-IQA <span class="metric-label">(↑)</span></th><th>CLIP <span class="metric-label">(↑)</span></th><th>FID-GT <span class="metric-label">(↓)</span></th><th>IR <span class="metric-label">(↑)</span></th><th>FID-O <span class="metric-label">(↓)</span></th><th>LPIPS <span class="metric-label">(↓)</span></th><th>PSNR <span class="metric-label">(↑)</span></th><th>SSIM <span class="metric-label">(↑)</span></th></tr></thead><tbody><tr class="dense-row"><td rowspan="3">PixArt-Σ</td><td style="text-align:left;">FP16</td><td>.967</td><td>26.14</td><td>24.78</td><td>.978</td><td>–</td><td>–</td><td>–</td><td>–</td></tr><tr><td style="text-align:left;">SVDQuant</td><td>.948</td><td class="best-val">26.09</td><td>25.83</td><td>.936</td><td>15.71</td><td>.344</td><td>16.55</td><td>.580</td></tr><tr class="highlight-row"><td style="text-align:left;">Ours</td><td class="best-val">.949</td><td class="best-val">26.09</td><td class="best-val">24.99</td><td class="best-val">.941</td><td class="best-val">13.74</td><td class="best-val">.329</td><td class="best-val">16.68</td><td class="best-val">.590</td></tr><tr class="dense-row"><td rowspan="3">FLUX.1-schnell</td><td style="text-align:left;">BF16</td><td>.930</td><td>26.22</td><td>20.85</td><td>.984</td><td>–</td><td>–</td><td>–</td><td>–</td></tr><tr><td style="text-align:left;">SVDQuant</td><td>.930</td><td class="best-val">26.15</td><td>20.14</td><td>.979</td><td>6.67</td><td>.259</td><td>17.32</td><td>.687</td></tr><tr class="highlight-row"><td style="text-align:left;">Ours</td><td class="best-val">.931</td><td class="best-val">26.15</td><td class="best-val">20.02</td><td class="best-val">.987</td><td class="best-val">6.47</td><td class="best-val">.251</td><td class="best-val">17.45</td><td class="best-val">.693</td></tr><tr class="dense-row"><td rowspan="3">SANA-1.6B</td><td style="text-align:left;">BF16</td><td>.967</td><td>26.69</td><td>22.89</td><td>1.065</td><td>–</td><td>–</td><td>–</td><td>–</td></tr><tr><td style="text-align:left;">SVDQuant</td><td>.962</td><td>26.67</td><td class="best-val">21.62</td><td>1.053</td><td>6.66</td><td>.220</td><td>17.10</td><td>.635</td></tr><tr class="highlight-row"><td style="text-align:left;">Ours</td><td class="best-val">.963</td><td class="best-val">26.72</td><td>21.69</td><td class="best-val">1.058</td><td class="best-val">6.51</td><td class="best-val">.214</td><td class="best-val">17.24</td><td class="best-val">.642</td></tr></tbody></table></div>
-      <p class="table-note">FID-O: FID against the full-precision outputs. <span class="accent">Green</span>: best quantized result.</p>
+      <p class="table-note">FID-O: FID against the full-precision outputs. <span class="accent">Blue</span>: best quantized result.</p>
     </div>
     <div id="video-content" class="tab-content" style="display:none;">
       <h4 class="title is-5 has-text-centered">Text-to-video</h4>
       <p class="scroll-hint">Scroll sideways for all columns &rarr;</p><div class="table-container"><table class="fancy-table"><thead><tr><th rowspan="2" style="text-align:left;">Metric</th><th colspan="3">Wan 2.1 T2V-1.3B · W4A4</th><th colspan="3">Open-Sora 1.0 · W4A8</th></tr><tr><th>BF16</th><th>SVDQuant</th><th class="th-ours">Ours</th><th>FP16</th><th>ViDiT-Q</th><th class="th-ours">ViDiT-Q + Ours</th></tr></thead><tbody><tr class="group-row"><td colspan="7">VBench (%)</td></tr><tr><td style="text-align:left;">Imaging quality ↑</td><td>65.13</td><td class="best-val">64.28</td><td class="ours-col">63.60</td><td>63.81</td><td>58.63</td><td class="best-val ours-col">60.62</td></tr><tr><td style="text-align:left;">Aesthetic quality ↑</td><td>60.96</td><td>55.00</td><td class="best-val ours-col">55.84</td><td>58.36</td><td>53.49</td><td class="best-val ours-col">54.45</td></tr><tr><td style="text-align:left;">Motion smoothness ↑</td><td>97.27</td><td>96.80</td><td class="best-val ours-col">97.07</td><td>95.88</td><td>94.98</td><td class="best-val ours-col">95.40</td></tr><tr><td style="text-align:left;">Dynamic degree ↑</td><td>66.67</td><td>55.56</td><td class="best-val ours-col">56.94</td><td>56.94</td><td>41.67</td><td class="best-val ours-col">45.83</td></tr><tr><td style="text-align:left;">Background consistency ↑</td><td>95.57</td><td>94.15</td><td class="best-val ours-col">94.62</td><td>96.02</td><td class="best-val">95.62</td><td class="ours-col">95.48</td></tr><tr><td style="text-align:left;">Subject consistency ↑</td><td>92.38</td><td>91.21</td><td class="best-val ours-col">91.69</td><td>91.33</td><td>87.31</td><td class="best-val ours-col">89.04</td></tr><tr><td style="text-align:left;">Scene ↑</td><td>30.01</td><td>20.42</td><td class="best-val ours-col">25.65</td><td>47.75</td><td>28.56</td><td class="best-val ours-col">39.24</td></tr><tr><td style="text-align:left;">Overall consistency ↑</td><td>24.90</td><td class="best-val">24.37</td><td class="ours-col">24.23</td><td>26.37</td><td>23.44</td><td class="best-val ours-col">25.55</td></tr><tr class="group-row"><td colspan="7">Similarity to full precision</td></tr><tr><td style="text-align:left;">LPIPS ↓</td><td>–</td><td>0.400</td><td class="best-val ours-col">0.374</td><td>–</td><td>0.516</td><td class="best-val ours-col">0.450</td></tr><tr><td style="text-align:left;">SSIM ↑</td><td>–</td><td>0.557</td><td class="best-val ours-col">0.581</td><td>–</td><td>0.524</td><td class="best-val ours-col">0.566</td></tr><tr><td style="text-align:left;">PSNR ↑</td><td>–</td><td>16.45</td><td class="best-val ours-col">16.54</td><td>–</td><td>15.55</td><td class="best-val ours-col">16.52</td></tr><tr><td style="text-align:left;">FVD ↓</td><td>–</td><td>638.2</td><td class="best-val ours-col">535.9</td><td>–</td><td>556.9</td><td class="best-val ours-col">429.9</td></tr></tbody></table></div>
-      <p class="table-note">Wan 2.1: 832&times;480, 81 frames, 50 steps. Open-Sora 1.0: 512&times;512, 16 frames, 100 steps, with our smoothing added to ViDiT-Q. <span class="accent">Green</span>: best quantized result per model.</p>
+      <p class="table-note">Wan 2.1: 832&times;480, 81 frames, 50 steps. Open-Sora 1.0: 512&times;512, 16 frames, 100 steps, with our smoothing added to ViDiT-Q. <span class="accent">Blue</span>: best quantized result per model.</p>
     </div>
   </div>
 </section>

@@ -18,9 +18,6 @@
 <style>
 /* art: hero backdrop, dark band, TL;DR */
 .hero-fancy{position:relative;background:#fff}
-.hero-fancy::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:linear-gradient(rgba(29,95,191,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(29,95,191,.06) 1px,transparent 1px);
-  background-size:32px 32px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%)}
 .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;pointer-events:none;animation:float 14s ease-in-out infinite alternate}
 .blob.b1{width:380px;height:380px;background:#7fb0ff;top:-120px;left:8%}
 .blob.b2{width:320px;height:320px;background:#b9a66b;top:40px;right:6%;opacity:.28;animation-delay:-5s}
@@ -37,7 +34,6 @@ details.abstract summary::-webkit-details-marker{display:none}
 details.abstract[open] summary{margin-bottom:1rem}
 details.abstract p{text-align:left;color:#555}
 .dark-band{background:radial-gradient(circle at 15% 10%,#1d3f78 0%,#0d1b33 55%,#08111f 100%);color:#cdd8ea;position:relative;overflow:hidden}
-.dark-band::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px}
 .dark-band .container{position:relative;z-index:1}
 .dark-band .kicker{color:var(--gold)}
 .big-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1000px;margin:1.8rem auto 2.4rem}
@@ -236,7 +232,6 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 <!-- ============================ KEY IDEA ============================ -->
 <section class="section band band-tint">
   <div class="container is-max-widescreen">
-    <span class="kicker">Key idea</span>
     <h2 class="title is-3 has-text-centered">Channels in a Group Share One Scale</h2>
     <p class="idea-lead">So their smoothing scales should be chosen <b>together</b>, not one channel at a time.</p>
     <div class="versus">
@@ -269,12 +264,10 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 <!-- ============================ ABSTRACT + METHOD ============================ -->
 <section class="section band band-white" id="method">
   <div class="container is-max-widescreen">
-    <span class="kicker">TL;DR</span>
+    <h2 class="title is-3 has-text-centered">TL;DR</h2>
     <p class="tldr">Under group-wise quantization, one channel's scale changes the error of its whole group. We find the scales of a group <b>jointly</b> as a <b>fixed point</b>, with no training and no inference cost.</p>
     <details class="abstract"><summary>Read the full abstract</summary><p>Smoothing enables low-bit quantization of diffusion transformers by scaling down each input activation channel while scaling up its corresponding weights. Existing methods determine the smoothing scale of each channel independently, using only that channel's statistics. Under group-wise quantization, however, multiple channels share a quantization scale, so rescaling one channel can change the quantization error of others in the same group. To account for this dependency, we formulate the minimization of the expected squared output quantization error as a fixed-point problem over the smoothing scales of all channels within each group. We then develop a training-free iterative algorithm that refines these scales jointly. The resulting scales consistently reduce output quantization error relative to existing heuristics across layers with different functions and at different block depths. This also translates to improved generation quality over existing methods across multiple model architectures and benchmarks for both image and video generation.</p></details>
-
-    <span class="kicker method-title">Method</span>
-    <h2 class="title is-3 has-text-centered">Three Steps, No Training</h2>
+    <h2 class="title is-3 has-text-centered method-title">Three Steps, No Training</h2>
     <figure class="fig-card"><img src="assets/fig/prelim.png" alt="Channel-wise smoothing and group-wise activation quantization." loading="lazy">
       <figcaption class="has-text-centered">Each token&ndash;group block shares one quantization scale, set by its largest value.</figcaption></figure>
     <div class="columns is-centered method-steps">
@@ -312,7 +305,6 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 <!-- ============================ ANALYSIS ============================ -->
 <section class="section band dark-band" id="analysis">
   <div class="container is-max-widescreen">
-    <span class="kicker">At a glance</span>
     <h2 class="title is-3 has-text-centered has-text-white">Lower Error in Almost Every Layer</h2>
     <div class="big-stats">
       <div class="big-stat"><b>161<small style="font-size:.5em;opacity:.7">/168</small></b><span>layers improved</span></div>
@@ -327,7 +319,6 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 <!-- ============================ PERFORMANCE ============================ -->
 <section class="section band band-gray" id="perf">
   <div class="container is-max-widescreen">
-    <span class="kicker">Benchmarks</span>
     <h2 class="title is-3 has-text-centered mb-5">Performance</h2>
     <div class="tabs is-toggle is-fullwidth is-centered is-rounded perf-tabs">
       <ul>

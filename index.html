@@ -10,7 +10,7 @@
   <meta property="og:url" content="https://sasukepn1999.github.io/Fixed-point-smoothing/">
   <meta property="og:image" content="https://sasukepn1999.github.io/Fixed-point-smoothing/assets/thumbs/pixart_mjhq/01_ours.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans:400,700|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script>window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
@@ -42,6 +42,8 @@ details.abstract p{text-align:left;color:#555}
 .big-stat span{font-size:.88rem;color:#f0d9d5}
 .glow-card{max-width:960px;margin:0 auto;background:#fff;border-radius:18px;padding:1.1rem;box-shadow:0 30px 70px rgba(0,0,0,.45)}
 .glow-card img{width:100%;height:auto}
+.glow-cap{max-width:960px;margin:1rem auto 0;color:#ecd8d5;font-size:.9rem;text-align:center}.glow-cap b{color:#fff}
+.dark-band .title{margin-bottom:2rem!important}
 .step-card{text-align:center}
 .step-card .step-num{width:44px;height:44px;font-size:1.1rem;box-shadow:0 8px 18px rgba(184,50,42,.35)}
 .step-card .is-size-7{text-align:center}
@@ -141,11 +143,11 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 .fancy-table td[rowspan]{font-weight:700;color:#333;border-right:1px solid #f0f0f0}
 .fancy-table .dense-row td:not([rowspan]){color:#999;font-style:italic}
 .fancy-table .highlight-row{background:#fef6f5}
-.fancy-table .highlight-row td{color:#222;font-weight:600}
+.fancy-table .highlight-row td{color:#222;font-weight:400}.fancy-table .highlight-row td[rowspan],.fancy-table td[rowspan]{font-weight:700}
 .fancy-table .group-row td{background:#f9f4f3;color:var(--accent-dark);font-weight:700;text-align:left;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
 .fancy-table .ours-col{background:#fef6f5;color:#222}
 .fancy-table th.th-ours{color:var(--accent)}
-.best-val{color:#111!important;font-weight:800!important}
+.best-val{color:#111!important;font-weight:700!important}
 .metric-label{font-size:.75em;color:#888}
 .fancy-table.is-video{font-size:.8rem}.fancy-table.is-video th{padding:8px 5px;font-size:.68rem;letter-spacing:.2px;white-space:normal}.fancy-table.is-video td{padding:8px 5px}.fancy-table.is-video td[rowspan]{white-space:normal;min-width:96px}
 .table-note{font-size:.85rem;color:#777;text-align:center;margin-top:.8rem}
@@ -306,13 +308,9 @@ a.btn-fancy:hover{background:var(--accent);border-color:var(--accent);transform:
 <section class="section band dark-band" id="analysis">
   <div class="container is-max-widescreen">
     <h2 class="title is-3 has-text-centered has-text-white">Lower Error in Almost Every Layer</h2>
-    <div class="big-stats">
-      <div class="big-stat"><b>161<small style="font-size:.5em;opacity:.7">/168</small></b><span>layers improved</span></div>
-      <div class="big-stat"><b>&minus;17.5%</b><span>mean layer error</span></div>
-      <div class="big-stat"><b>&minus;20.5%</b><span>output error</span></div>
-      <div class="big-stat"><b>18.02</b><span>FID-GT, from 18.84</span></div>
-    </div>
     <div class="glow-card"><img src="assets/fig/layer_errors.png" alt="Per-layer relative output error of SVDQuant and ours across the 168 layers of PixArt-Sigma; ours is lower almost everywhere." loading="lazy"></div>
+    <p class="glow-cap">Relative output error of each quantized layer of PixArt-&Sigma; (W4A4 with GPTQ), SVDQuant vs. ours, on prompts not used to compute the smoothing scales.
+    <b>(a)</b> Per layer in execution order, averaged over six consecutive layers. <b>(b)</b> By block depth (top) and by layer function (bottom), where Self and Cross are self- and cross-attention and each percentage is the change of the mean error.</p>
   </div>
 </section>
 
